@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Administrador - IESTP CCF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Panel de la Oficina de Personal</h2>
+
+<p id="adminNombre"></p>
+
+<button onclick="cerrarSesion()">Cerrar sesión</button>
+
+<hr>
+
+<!-- =========================
+     CREAR USUARIOS
+========================= -->
+<h3>Crear nuevo usuario</h3>
+
+<label>Nombre completo:</label>
+<input type="text" id="nuevoNombre">
+
+<label>Usuario:</label>
+<input type="text" id="nuevoUsuario">
+
+<label>Contraseña:</label>
+<input type="password" id="nuevoPassword">
+
+<label>Cargo:</label>
+<select id="nuevoCargo">
+    <option value="">Seleccione</option>
+    <option>Docente</option>
+    <option>Administrativo</option>
+</select>
+
+<label>Área:</label>
+<input type="text" id="nuevoArea" placeholder="Ej: Computación">
+
+<label>Rol:</label>
+<select id="nuevoRol">
+    <option value="usuario">Usuario</option>
+    <option value="admin">Administrador</option>
+</select>
+
+<br><br>
+
+<button onclick="crearUsuario()">Crear usuario</button>
+
+<p id="mensajeUsuario"></p>
+
+<hr>
+
+<!-- =========================
+     FILTROS DE ASISTENCIAS
+========================= -->
+<h3>Registro General de Asistencias</h3>
+
+<label>Usuario:</label>
+<input type="text" id="filtroUsuario" placeholder="Nombre del usuario">
+
+<label style="margin-left:10px;">Desde:</label>
+<input type="date" id="fechaInicio">
+
+<label style="margin-left:10px;">Hasta:</label>
+<input type="date" id="fechaFin">
+
+<br><br>
+
+<button onclick="aplicarFiltros()">Aplicar filtros</button>
+<button onclick="limpiarFiltros()">Limpiar</button>
+
+<br><br>
+
+<!-- =========================
+     TABLA DE ASISTENCIAS
+========================= -->
+<table border="1" width="100%">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Cargo</th>
+            <th>Fecha</th>
+            <th>Hora Entrada</th>
+            <th>Hora Salida</th>
+            <th>Turno</th>
+        </tr>
+    </thead>
+    <tbody id="tablaAdmin"></tbody>
+</table>
+
+<script src="admin.js"></script>
+
+</body>
+</html>

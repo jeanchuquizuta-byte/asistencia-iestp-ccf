@@ -1,0 +1,128 @@
+/* =========================
+   ESTILOS GENERALES
+========================= */
+body {
+    font-family: Arial, sans-serif;
+    margin: 15px;
+    background: #f5f5f5;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+/* =========================
+   BOTONES
+========================= */
+button {
+    background: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #125aa0;
+}
+
+/* =========================
+   CONTENEDORES
+========================= */
+.contenedor {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: auto;
+}
+
+hr {
+    margin: 25px 0;
+}
+
+/* =========================
+   TABLAS
+========================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    background: #1976d2;
+    color: white;
+}
+
+/* =========================
+   MENSAJES
+========================= */
+#mensaje,
+#mensajeUsuario {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* =========================
+   RESPONSIVE CELULAR
+========================= */
+@media (max-width: 768px) {
+
+    body {
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .contenedor {
+        padding: 12px;
+    }
+
+    button {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    /* TABLA CON SCROLL */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        font-size: 13px;
+        padding: 6px;
+    }
+}

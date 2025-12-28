@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Asistencia - IESTP CCF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Registro de Asistencia</h1>
+<h2>IESTP CCF</h2>
+
+<div class="contenedor">
+
+    <label>Turno:</label>
+    <select id="turno">
+        <option value="">Seleccione</option>
+        <option value="Día">Día</option>
+        <option value="Noche">Noche</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="marcarEntrada()">Marcar Entrada</button>
+    <button onclick="marcarSalida()">Marcar Salida</button>
+
+    <p id="mensaje"></p>
+
+</div>
+
+<div style="margin:20px 0;">
+  <label>Desde:</label>
+  <input type="date" id="fechaInicio">
+
+  <label style="margin-left:10px;">Hasta:</label>
+  <input type="date" id="fechaFin">
+
+  <button onclick="filtrarPorFechas()" style="margin-left:10px;">
+    Filtrar
+  </button>
+
+  <button onclick="mostrarTodas()" style="margin-left:5px;">
+    Mostrar todo
+  </button>
+</div>
+
+<h3>Mis Asistencias</h3>
+
+<table border="1" width="100%">
+    <thead>
+    <tr>
+        <th>Fecha</th>
+        <th>Hora Entrada</th>
+        <th>Hora Salida</th>
+        <th>Turno</th>
+    </tr>
+</thead>
+    <tbody id="tablaUsuarios"></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Usuarios - IESTP CCF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Oficina de Personal – Gestión de Usuarios</h2>
+
+<form id="formUsuario">
+    <label>Nombre completo:</label>
+    <input type="text" id="nombre" required>
+
+    <label>Cargo:</label>
+    <select id="cargo" required>
+        <option value="Docente">Docente</option>
+        <option value="Administrativo">Administrativo</option>
+    </select>
+
+    <label>Área / Programa:</label>
+    <input type="text" id="area" required>
+
+    <label>Usuario:</label>
+    <input type="text" id="usuario" required>
+
+    <label>Contraseña inicial:</label>
+    <input type="password" id="password" required>
+
+    <button type="submit">Crear Usuario</button>
+</form>
+
+<h3>Usuarios Registrados</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Usuario</th>
+            <th>Cargo</th>
+            <th>Área</th>
+        </tr>
+    </thead>
+    <tbody id="tablaUsuarios"></tbody>
+</table>
+
+<script src="usuarios.js"></script>
+</body>
+</html>
